@@ -162,36 +162,12 @@ footer
 }
 
 .container > div{
-  width: 33%;
+  width: 30%;
   display: inline-block;
   box-sizing: border-box;
 }
 
-@media only screen and  (max-width: 480px) 
-{ /*breakpoint*/
-    .container > div {
-        display: block;
-        width: 100%;
-    }
-    #contact #navb
-    {
-      display: block;
-      margin: 0 0;
-    }
-    #contact #navb div ul li{
-      display: block;
-      padding: 2%;
-    }
 
-    #navbar #menu{
-      visibility: hidden;
-    }
-
-    #contact span p {
-      display: none;
-    }
-    
-}
 
 #contactus
 {
@@ -232,18 +208,95 @@ footer
   margin: auto;
   width: 70%;
   display: inline-block;
+  padding-bottom: 5%;
+
 }
 
+#contactus form p#message{
+  width: 50%;
+  float: right;
+}
+
+#contactus form div#left{
+  width: 50%;
+  display: block;
+  float: left;
+}
 
 #contactus form #end{
   color: darkgrey;
-  padding: 5%;
+  padding: 2% 5% 1% 5%;
+
 }
 
-#contactus form #btn{
-  background-color: #30c3a6;;
+#contactus form div #btn{
+  background-color: #30c3a6;
   border: none;
   color: white;
-  padding: 1%;
+  padding: 3%;
+ 
 }
 
+#contactus form input{
+  width: 80%;
+   border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 3% 5%;
+    margin: 1% 0
+}
+
+#contactus form textarea{
+  width: 80%;
+  border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 3% 5%;
+    margin: 1% 0
+}
+
+#contactus form p label{
+  text-align: left;
+  color: darkgrey;
+  float: left;
+  margin-left: 10%;
+}
+
+@media only screen and (max-width: 800px)
+{
+  .container > div {
+        width: 43%;
+    }
+}
+
+@media only screen and  (max-width: 480px) 
+{ /*breakpoint*/
+    .container > div {
+        display: block;
+        width: 100%;
+    }
+    #contact #navb
+    {
+      display: block;
+      margin: 0 0;
+    }
+    #contact #navb div ul li{
+      display: block;
+      padding: 2%;
+      border-bottom: 1px solid darkgray;
+    }
+
+    #navbar #menu{
+      visibility: hidden;
+    }
+
+    #contact span p {
+      display: none;
+    }
+    
+    #contactus form div#left{
+      width: 100%;
+    }
+
+    #contactus form p#message{
+      width: 100%;
+    }
+}
