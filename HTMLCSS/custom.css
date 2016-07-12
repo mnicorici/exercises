@@ -5,45 +5,51 @@ body{
   border: 0;
   text-align: center;
 }
-nav ul li
+body #navbar div ul li
 {
   display: inline-block;
   list-style-type: none;
-  margin-bottom: 20px;
-  line-height: 50px;
-    height: 50px;
-	padding: 0 10px;
+  margin-bottom: 5%;
+  line-height: 10%;
+  height: 10%;
+	padding: 0 2%;
+  margin-top: 5%;
  
 }
-nav ul li img{
-    margin-left: 150px;
-    margin-right: 150px;
+#logo img{
+    margin-right: 10%;
+    margin-left: 10%;
+    float:left;
+    padding: 0;
+    border: 0;
+    margin: 0;
 }
 
-ul{
+#logo{
+  margin-left: 15%;
+}
+ul
+{
 	list-style-type: none;
 	margin: 0;
-    padding: 0;
+  padding: 0;
 }
 
 
-nav > ul > li > a {
+nav > div > ul > li > a {
         color: #aaa;
-        padding: 0 10px;
         text-decoration: none;
 		
-      }
+}
 #navbar
 {
-  margin-top : 40px;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
-  box-shadow: 0 0 3px 0;
-  margin-bottom: 40px;
+  margin-top :5%;
+  box-shadow: 0 0 2px 0;
+  margin-bottom: 5%;
 }
 #lorem{
 	
-  padding: 50px 150px;	
+  padding:10% 15%;	
   background: #30c3a6;
   color: white;
   text-align: center;
@@ -51,34 +57,20 @@ nav > ul > li > a {
 }
 #about{
   text-align: center;
-  margin: 50px 200px;
+  margin: 5% 20%;
   color: #6f6c6c;
 }
-
-#container
-{
-	padding:50px;
-   background: #30c3a6;
-   text-align:center;
-   color: white;
-  
-}
-
-
-#container #left{width: 30%;
-display: inline-block;}
 
 .button
 {
 	background-color: #203f61;
 	border: none;
 	color: white;
-	padding: 10px 15px;
+	padding: 1% 2%;
 	text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-	margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
+	margin-top: 5%;
 }
 #about h3{
   z-index: 1;
@@ -104,12 +96,12 @@ display: inline-block;}
 }
 
 
-#container h3{
+.container h3{
   z-index: 1;
   overflow: hidden;
   padding: 3%;
 }
-#container h3:before, #container h3:after{
+.container h3:before, .container h3:after{
   content: "";
   background-color: lightgrey;
   display: inline-block;
@@ -118,18 +110,18 @@ display: inline-block;}
   width: 50%;
   height: 1px;
 }
-#container  h3:before {
+.container  h3:before {
     right: 0.5em;
     margin-left: -50%;
 }
-#container h3:after {
+.container h3:after {
     left: 0.5em;
     margin-right: -50%;
 }
-#container div img{
+.container div img{
 	border: 5px solid #FFF;
 }
-#container h4{
+.container h4{
 	text-transform: uppercase;
 }
 
@@ -139,12 +131,120 @@ display: inline-block;}
   list-style-type: none;
   padding: 10px 10px;
   color: white;
-  
- 
-  
+  position: relative;
+
+}
+
+#contact span img{
+  width: 50%;
+  height: 50%;
+  position: absolute;
+
+}
+
+#contact #navb
+{
+  display: none;
 }
 
 footer
 {
   background: #203f61;	
 }
+
+.container
+{
+  padding:5%;
+  background: #30c3a6;
+  text-align:center;
+  color: white;
+  
+}
+
+.container > div{
+  width: 33%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+@media only screen and  (max-width: 480px) 
+{ /*breakpoint*/
+    .container > div {
+        display: block;
+        width: 100%;
+    }
+    #contact #navb
+    {
+      display: block;
+      margin: 0 0;
+    }
+    #contact #navb div ul li{
+      display: block;
+      padding: 2%;
+    }
+
+    #navbar #menu{
+      visibility: hidden;
+    }
+
+    #contact span p {
+      display: none;
+    }
+    
+}
+
+#contactus
+{
+  background-color: rgb(232,79,64);
+  list-style-type: none;
+  padding: 10px 10px;
+  padding-bottom: 5%;
+  
+
+}
+#contactus h3{
+  z-index: 1;
+  overflow: hidden;
+  padding: 3%;
+  color:white;
+}
+#contactus h3:before, #contactus h3:after{
+  content: "";
+  background-color: lightgrey;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+  height: 1px;
+}
+#contactus  h3:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+#contactus h3:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+#contactus form
+{
+  background-color: white;
+  margin: auto;
+  width: 70%;
+  
+}
+
+
+
+#contactus form #end{
+  color: darkgrey;
+  padding: 5%;
+}
+
+#contactus form #btn{
+  background-color: #30c3a6;;
+  border: none;
+  color: white;
+  padding: 1%;
+}
+

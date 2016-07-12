@@ -6,15 +6,20 @@
 	<link href="custom.css" type="text/css" rel="stylesheet"/>
   </head>
   <body>
-    <nav id="navbar">
+  
+  <div id="logo">
+      <img src="http://www.endava.com/~/media/Common/logo.ashx">
+    </div>
+  <nav id="navbar">
+    <div id="menu">
 		<ul>
-          <li><img src="http://www.endava.com/~/media/Common/logo.ashx"></li>
           <li><a href="#">HOME</a></li>
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#container">PHOTOS</a></li>
-          <li><a href="#contact">CONTACT US</a></li>
-          </ul>
-    </nav>
+          <li><a href="#contactus">CONTACT US</a></li>
+      </ul>
+    </div>
+  </nav>
     <section id="lorem">
       <h1>LOREM IPSUS</h1>
       <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae arcu vitae tortor hendrerit cursus vitae sit amet ex. 
@@ -26,39 +31,80 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem orci, accumsan sed felis ac, bibendum dictum dolor. Praesent consequat tincidunt hendrerit. Nulla congue massa augue. Vestibulum dolor mi, maximus ac nunc suscipit, mollis suscipit odio. Etiam pellentesque mi dignissim purus commodo lacinia sed id lectus. Suspendisse potenti. Duis pellentesque elit vulputate, molestie erat quis, interdum lorem. Duis efficitur cursus nisl, sed eleifend erat sodales et. Fusce in enim et turpis finibus porttitor. Sed ut sagittis ante. Etiam quis rhoncus dui, in scelerisque tellus. Integer tempus, purus ac varius blandit, erat odio pretium elit, ac suscipit mauris ligula quis turpis. Ut et finibus erat, sed vestibulum elit.</p>
 		<p>Donec vitae lorem vitae turpis volutpat suscipit. Curabitur ac massa sit amet urna imperdiet vestibulum. Duis ut sagittis sem. Ut varius at sapien sed ornare. In sed interdum lacus, quis pellentesque sem. Vivamus laoreet viverra tincidunt. Sed vel placerat erat, ac tincidunt nibh. Curabitur congue ligula id ante vehicula, a pulvinar orci semper. Vestibulum ac quam fringilla, varius diam id, dapibus eros. In mollis libero vel ante varius blandit. Praesent placerat nisl nec felis vulputate efficitur.</p>
     </section>
-	<div id="container">
+	<div class="container">
 		<h3>PHOTOS</h3>
-		<div id="left"><img src="D:\GIT\HTMLCSS\1.jpg" alt="photo" width="100px" height="100px">
+		<div ><img src="D:/GIT/HTMLCSS/1.jpg" alt="photo">
             <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
           </div>
 		  
-		  <div id="left"><img src="D:\GIT\HTMLCSS\1.jpg" alt="photo" width="100px" height="100px">
+		  <div ><img src="D:/GIT/HTMLCSS/1.jpg" alt="photo">
             <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
           </div>
-		  <div id="left"><img src="D:\GIT\HTMLCSS\1.jpg" alt="photo" width="100px" height="100px">
+		  <div><img src="D:/GIT/HTMLCSS/1.jpg" alt="photo" >
             <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
           </div>
-		  <div id="left"><img src="D:\GIT\HTMLCSS\1.jpg" alt="photo" width="100px" height="100px">
+		  <div><img src="D:/GIT/HTMLCSS/1.jpg" alt="photo" >
             <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
           </div>
-		  <div id="left"><img src="D:\GIT\HTMLCSS\1.jpg" alt="photo" width="100px" height="100px">
+		  <div ><img src="D:/GIT/HTMLCSS/1.jpg" alt="photo">
             <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
           </div>
-		  <div id="left"><img src="D:\GIT\HTMLCSS\1.jpg" alt="photo"width="100px" height="100px">
+		  <div ><img src="D:/GIT/HTMLCSS/1.jpg" alt="photo">
             <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 			</div>
 	</div>
+
+  <div id="contactus">
+    <h3>CONTACT US</h3>
+    <form action="demo_form.asp" method="get">
+        <h2 id="end">ENDAVA 2016!</h2>
+        <div id="left"> 
+        <p ">
+           <label for="name">Your name*</label>
+           <br>
+          <input type="text" name="name" id="name">
+        </p>
+        <p>
+           <label for="email">Your email*</label>
+           <br>
+            <input type="email" name="email" id="email">
+        </p>
+        <p >
+           <label for="phone">Contact phone</label>
+           <br>
+          <input type="tel" name="phone" id="phone">
+        </p>
+        </div>
+        <p>
+           <label for="mess">Type your message</label>
+           <br>
+          <textarea name="mess" id="mess"></textarea> 
+        </p>
+      <input type="submit" value="Send Message" id="btn">
+</form>
+  </div>
 	<footer id="contact">
+
+  <nav id="navb">
+    <div id="menu">
+    <ul>
+          
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#container">PHOTOS</a></li>
+          <li><a href="#contactus">CONTACT US</a></li>
+      </ul>
+    </div>
+  </nav>
    
-	<span><img alt="follow me on twitter" src="D:\GIT\HTMLCSS\FB.png" width="20px" height="20px"></span>
-	<span><img alt="follow me on twitter" src="D:\GIT\HTMLCSS\Twit.png" width="20px" height="20px"></span>
-	<span><img alt="follow me on twitter" src="D:\GIT\HTMLCSS\github.png" width="20px" height="20px"></span>
+	<span><img alt="follow me on twitter" src="D:\GIT\HTMLCSS\FB.png"></span>
+	<span><img alt="follow me on twitter" src="D:\GIT\HTMLCSS\Twit.png"></span>
+	<span><img alt="follow me on twitter" src="D:\GIT\HTMLCSS\github.png"></span>
 	<span><p>Internship Endava 2016</p></span>
 	</footer>
   </body>
