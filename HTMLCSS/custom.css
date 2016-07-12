@@ -9,20 +9,17 @@ body #navbar div ul li
 {
   display: inline-block;
   list-style-type: none;
-  margin-bottom: 5%;
-  line-height: 10%;
-  height: 10%;
+  margin-bottom: 3%;
 	padding: 0 2%;
-  margin-top: 5%;
+  margin-top: 3%;
  
 }
-#logo img{
-    margin-right: 10%;
-    margin-left: 10%;
-    float:left;
-    padding: 0;
-    border: 0;
-    margin: 0;
+#logo img
+{
+  float:left;
+  padding: 0;
+  border: 0;
+  margin: 0;
 }
 
 #logo{
@@ -36,26 +33,29 @@ ul
 }
 
 
-nav > div > ul > li > a {
-        color: #aaa;
-        text-decoration: none;
-		
+nav > div > ul > li > a 
+{
+  color: #aaa;
+  text-decoration: none;		
 }
+
 #navbar
 {
   margin-top :5%;
   box-shadow: 0 0 2px 0;
   margin-bottom: 5%;
 }
-#lorem{
+
+#lorem
+{
 	
   padding:10% 15%;	
   background: #30c3a6;
   color: white;
-  text-align: center;
-  
 }
-#about{
+
+#about
+{
   text-align: center;
   margin: 5% 20%;
   color: #6f6c6c;
@@ -72,8 +72,9 @@ nav > div > ul > li > a {
   display: inline-block;
 	margin-top: 5%;
 }
+
+
 #about h3{
-  z-index: 1;
   overflow: hidden;
   padding: 3%;
 }
@@ -97,7 +98,6 @@ nav > div > ul > li > a {
 
 
 .container h3{
-  z-index: 1;
   overflow: hidden;
   padding: 3%;
 }
@@ -136,8 +136,7 @@ nav > div > ul > li > a {
 }
 
 #contact span img{
-  width: 50%;
-  height: 50%;
+  width: 70%;
   position: absolute;
 
 }
@@ -179,7 +178,6 @@ footer
 
 }
 #contactus h3{
-  z-index: 1;
   overflow: hidden;
   padding: 3%;
   color:white;
@@ -239,18 +237,18 @@ footer
 
 #contactus form input{
   width: 80%;
-   border: 1px solid #ccc;
-    box-sizing: border-box;
-    padding: 3% 5%;
-    margin: 1% 0
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 3% 5%;
+  margin: 1% 0
 }
 
 #contactus form textarea{
   width: 80%;
   border: 1px solid #ccc;
-    box-sizing: border-box;
-    padding: 3% 5%;
-    margin: 1% 0
+  box-sizing: border-box;
+  padding: 3% 5%;
+  margin: 1% 0
 }
 
 #contactus form p label{
