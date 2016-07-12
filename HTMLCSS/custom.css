@@ -231,9 +231,8 @@ footer
   background-color: white;
   margin: auto;
   width: 70%;
-  
+  display: inline-block;
 }
-
 
 
 #contactus form #end{

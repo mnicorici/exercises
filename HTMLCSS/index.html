@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
 	<title>HomePage</title>
 	<link href="custom.css" type="text/css" rel="stylesheet"/>
+  <script src="validate.js"></script>
+
   </head>
   <body>
   
@@ -62,24 +64,24 @@
 
   <div id="contactus">
     <h3>CONTACT US</h3>
-    <form action="demo_form.asp" method="get">
+    <form name="myForm" method="post" onsubmit="return validateForm()">
         <h2 id="end">ENDAVA 2016!</h2>
         <div id="left"> 
-        <p ">
-           <label for="name">Your name*</label>
-           <br>
-          <input type="text" name="name" id="name">
-        </p>
-        <p>
-           <label for="email">Your email*</label>
-           <br>
-            <input type="email" name="email" id="email">
-        </p>
-        <p >
-           <label for="phone">Contact phone</label>
-           <br>
-          <input type="tel" name="phone" id="phone">
-        </p>
+          <p>
+             <label for="name">Your name*</label>
+             <br>
+            <input type="text" name="name" id="name">
+          </p>
+          <p>
+             <label for="email">Your email*</label>
+             <br>
+              <input type="email" name="email" id="email">
+          </p>
+          <p >
+             <label for="phone">Contact phone</label>
+             <br>
+            <input type="tel" name="phone" id="phone">
+          </p>
         </div>
         <p>
            <label for="mess">Type your message</label>
