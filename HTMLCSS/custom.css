@@ -146,7 +146,7 @@ nav > div > ul > li > a
   display: none;
 }
 
-footer
+#contact
 {
   background: #203f61;	
 }
@@ -296,5 +296,9 @@ footer
 
     #contactus form p#message{
       width: 100%;
+    }
+
+    #logo {
+      margin-left: 0;
     }
 }
