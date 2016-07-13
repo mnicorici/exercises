@@ -2,8 +2,6 @@ package com.example.spring.service;
 
 import java.util.List;
 
-import org.springframework.stereotype.Component;
-
 import com.example.spring.domain.User;
 
 public interface UserService {

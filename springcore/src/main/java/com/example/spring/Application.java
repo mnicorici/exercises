@@ -11,7 +11,7 @@ public class Application {
 	public static void main(String[] args) {
 		List<ConfigRunner> runnerList = new ArrayList<>();
 		runnerList.add(new JavaConfigRunner());
-		runnerList.add(new XmlConfigRunner());
+		//runnerList.add(new XmlConfigRunner());
 		
 		for(ConfigRunner configRunner : runnerList){
 			configRunner.run();

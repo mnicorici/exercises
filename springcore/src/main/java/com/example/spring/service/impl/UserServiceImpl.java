@@ -2,16 +2,10 @@ package com.example.spring.service.impl;
 
 import java.util.List;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
-import com.example.spring.config.Config;
 import com.example.spring.domain.User;
-import com.example.spring.repository.UserRepository;
 import com.example.spring.repository.impl.UserRepositoryImpl;
 import com.example.spring.service.UserService;
 
@@ -20,13 +14,6 @@ public class UserServiceImpl implements UserService
 {
 	@Autowired
 	private UserRepositoryImpl userRepository;
-	
-	
-	
-	public void showRepo()
-	{
-		System.out.println(userRepository.toString());
-	}
 	
 	
 	@Override

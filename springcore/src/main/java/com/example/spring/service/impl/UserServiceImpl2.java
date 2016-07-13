@@ -5,10 +5,8 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.example.spring.domain.User;
@@ -24,6 +22,14 @@ public class UserServiceImpl2 implements UserService, ApplicationContextAware{
 	UserRepository userRepository ;
 	
 	
+	public UserRepository getUserRepository() {
+		return userRepository;
+	}
+
+	public void setUserRepository(UserRepository userRepository) {
+		this.userRepository = userRepository;
+	}
+
 	@Override
 	public List<User> list() {
 		//call method from UserRepository and remove throw

@@ -3,6 +3,8 @@ package com.example.spring.repository.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -33,7 +35,13 @@ public class UserRepositoryImpl implements UserRepository{
 	@Override
 	public void save(User user) {
 		list.add(user);
-		System.out.println("User saved!!  " + list);
+		System.out.println("User saved!!  " + user);
+	}
+	
+	@PostConstruct
+	public void showRepo()
+	{
+		System.out.println("Repo "  + this);
 	}
 
 }

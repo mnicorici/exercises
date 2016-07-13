@@ -6,4 +6,9 @@
 	<bean id="userRepository" class="com.example.spring.repository.impl.UserRepositoryImpl">
 	</bean>
 	
+	<bean id="service1" class="com.example.spring.service.impl.UserServiceImpl2">
+		<property name="userRepository"><ref bean="userRepository"></ref></property>
+	</bean>
+	
+	
 </beans>
