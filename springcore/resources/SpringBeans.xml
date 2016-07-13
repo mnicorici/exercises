@@ -5,5 +5,5 @@
 
 	<bean id="userRepository" class="com.example.spring.repository.impl.UserRepositoryImpl">
 	</bean>
-
+	
 </beans>

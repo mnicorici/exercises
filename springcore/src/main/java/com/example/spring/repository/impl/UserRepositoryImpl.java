@@ -1,5 +1,6 @@
 package com.example.spring.repository.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -14,9 +15,11 @@ import com.example.spring.repository.UserRepository;
 public class UserRepositoryImpl implements UserRepository{
 	
 
+	private List<User> list = new ArrayList<>();
 	@Override
 	public List<User> list() {
 		System.out.println("getAll");
+		
 		return null;
 	}
 
@@ -29,7 +32,8 @@ public class UserRepositoryImpl implements UserRepository{
 
 	@Override
 	public void save(User user) {
-		System.out.println("User saved!!  " + user);
+		list.add(user);
+		System.out.println("User saved!!  " + list);
 	}
 
 }

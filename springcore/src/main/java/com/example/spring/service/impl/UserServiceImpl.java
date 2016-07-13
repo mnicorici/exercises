@@ -2,6 +2,8 @@ package com.example.spring.service.impl;
 
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -18,6 +20,13 @@ public class UserServiceImpl implements UserService
 {
 	@Autowired
 	private UserRepositoryImpl userRepository;
+	
+	
+	
+	public void showRepo()
+	{
+		System.out.println(userRepository.toString());
+	}
 	
 	
 	@Override
@@ -37,6 +46,7 @@ public class UserServiceImpl implements UserService
 	@Override
 	public void save(User user) {
 		//call method from UserRepository and remove throw
+		System.out.println("First impl");
 		userRepository.save(user);
 	}
 }

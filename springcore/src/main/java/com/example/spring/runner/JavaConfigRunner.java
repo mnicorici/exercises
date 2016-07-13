@@ -15,7 +15,7 @@ public class JavaConfigRunner implements ConfigRunner {
 		
 		UserController userController = context.getBean(UserController.class);
 		userController.createUser(new User());
-		
+		userController.createUser(new User());
 		context.registerShutdownHook();
 	}
 	
