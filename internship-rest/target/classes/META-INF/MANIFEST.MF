@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: internship-rest
 Implementation-Version: 1.0-SNAPSHOT
-Built-By: mnicorici
+Built-By: mada
 Implementation-Vendor-Id: com.endava
 Build-Jdk: 1.8.0_91
 Created-By: Maven Integration for Eclipse

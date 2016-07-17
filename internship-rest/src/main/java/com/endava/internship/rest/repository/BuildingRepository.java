@@ -7,6 +7,7 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.stereotype.Repository;
 
+import com.endava.internship.rest.model.Apartment;
 import com.endava.internship.rest.model.Building;
 
 @Repository
@@ -19,11 +20,23 @@ public class BuildingRepository
 	public void initialize(){
 		buildingList = new ArrayList<>();
 		
+		
 		Building building = new Building(1, "Building 1", "Street 1");
 		Building secBuilding = new Building(2, "Building 2", "Street 2");
 		
+		Apartment apart1 = new Apartment(1,1,1,"apartment1");
+		Apartment apart2 = new Apartment(2,2,2,"apartment2");
+		
+		List<Apartment> apartList = new ArrayList<>();
+		apartList.add(apart2);
+		apartList.add(apart1);
+		
+		building.setListApartment(apartList);
+		//secBuilding.setListApartment(apartList);
+		
 		buildingList.add(building);
 		buildingList.add(secBuilding);
+		
 	}
 	
 	
@@ -36,12 +49,14 @@ public class BuildingRepository
 	
 	public List<Building> createBuildings(List<Building> building)
 	{
-		List<Building> buildingNew = new ArrayList<>();
+		List<Building> buildingsNew = new ArrayList<>();
 		this.buildingList.removeAll(buildingList);
 		for(Building build: building)
 		{
-			buildingList.add(this.createBuilding(build));
+			Building buildingNew = new Building(5, build.getName(), build.getAdress());
+			buildingsNew.add(buildingNew);
 		}
+		buildingList.addAll(buildingsNew);
 		System.out.print(buildingList);
 		return buildingList;
 	}
