@@ -30,6 +30,10 @@ public class DiscoveryController {
         List<Link> links = new ArrayList<>();
         links.add(linkTo(methodOn(DiscoveryController.class).discovery()).withSelfRel());
         links.add(linkTo(methodOn(HelloController.class).hello("default-user")).withRel("hello"));
+        links.add(linkTo(methodOn(BuildingController.class).getBuildings()).withSelfRel());
+        links.add(linkTo(methodOn(BuildingController.class).getBuilding(1)).withSelfRel());
+        links.add(linkTo(methodOn(ApartmentController.class).getApartments(1)).withSelfRel());
+        links.add(linkTo(methodOn(ApartmentController.class).getApartment(1,1)).withSelfRel());
 
         return new ResponseEntity<>(new Resources<>(Collections.emptySet(), links), HttpStatus.OK);
     }

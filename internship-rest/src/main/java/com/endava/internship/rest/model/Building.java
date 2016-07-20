@@ -11,8 +11,24 @@ public class Building
 	private String name;
 	private String adress;
 	
-	public Building(){}
+	public Building()
+	{
+		this.id = 0;
+		this.name = null;
+		this.adress = null;
+	}
 	
+	public Building(String name)
+	{
+		this.name = name;
+	}
+	
+	public Building(String name, String adress)
+	{
+		this.name = name;
+		this.adress = adress;
+	}
+		
 	public Building(Integer id, String name, String adress)
 	{
 		this.id = id;

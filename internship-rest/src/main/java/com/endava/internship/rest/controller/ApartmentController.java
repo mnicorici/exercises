@@ -41,10 +41,10 @@ public class ApartmentController
 		
 		apartmentResources.add(linkTo(methodOn(ApartmentController.class).getApartments(id)).withSelfRel());
 		
-		/*apartmentResources.forEach((buildingResource -> {
-			buildingResource.add(linkTo(methodOn(BuildingController.class)
-                    .getBuilding(buildingResource.getContent().getId())).withSelfRel());
-        }));*/
+		apartmentResources.forEach((apartmentResource -> {
+			apartmentResource.add(linkTo(methodOn(ApartmentController.class)
+                    .getApartment(apartmentResource.getContent().getId(), id)).withSelfRel());
+        }));
 		
 		return new ResponseEntity<>(apartmentResources, HttpStatus.OK);
 				

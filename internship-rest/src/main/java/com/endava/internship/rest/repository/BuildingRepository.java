@@ -32,7 +32,7 @@ public class BuildingRepository
 		apartList.add(apart1);
 		
 		building.setListApartment(apartList);
-		//secBuilding.setListApartment(apartList);
+		secBuilding.setListApartment(apartList);
 		
 		buildingList.add(building);
 		buildingList.add(secBuilding);
@@ -47,6 +47,20 @@ public class BuildingRepository
 		return building;
 	}
 	
+	public Building updateBuilding(Building newBuilding, Integer buildingId)
+	{
+		Building oldBuilding = this.getById(buildingId);
+		if(!newBuilding.getAdress().trim().isEmpty())
+		{
+			oldBuilding.setAdress(newBuilding.getAdress());
+		}
+		if(!newBuilding.getName().trim().isEmpty())
+		{
+			oldBuilding.setName(newBuilding.getName());
+		}
+		
+		return oldBuilding;
+	}
 	public List<Building> createBuildings(List<Building> building)
 	{
 		List<Building> buildingsNew = new ArrayList<>();

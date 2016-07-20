@@ -73,6 +73,17 @@ public class BuildingController
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);			
  	}
 	
+	@RequestMapping(path = "/{buildingId}", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public HttpEntity<Resource<Building>> updateBuilding(@RequestBody Building building, @PathVariable Integer buildingId) 
+	{
+        Building updatedBuilding = this.buildingService.updateBuilding(building, buildingId);
+
+        Resource<Building> buildingResource = new Resource<>(updatedBuilding);
+        //buildingResource.add(linkTo(methodOn(BuildingController.class).getBuilding(buildingResource.getContent().getId())).withSelfRel());
+
+        return new ResponseEntity<>(buildingResource, HttpStatus.CREATED);
+    }
+	
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public HttpEntity<Resource<Building>> createBuilding(@RequestBody Building building) {
         Building createdBuilding = this.buildingService.createBuilding(building);
@@ -82,6 +93,7 @@ public class BuildingController
 
         return new ResponseEntity<>(buildingResource, HttpStatus.CREATED);
     }
+	
 	
 	@RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
     public HttpEntity<Resource<Building>> createBuildings(@RequestBody List<Building> buildings) {

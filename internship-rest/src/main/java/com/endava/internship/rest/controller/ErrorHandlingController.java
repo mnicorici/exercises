@@ -1,5 +1,6 @@
 package com.endava.internship.rest.controller;
 
+import com.endava.internship.rest.exception.MyException;
 import com.endava.internship.rest.exception.ValidationException;
 import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.hateoas.Resource;
@@ -27,10 +28,10 @@ public class ErrorHandlingController implements ErrorController {
         return new ResponseEntity<>(new Resource<>("Resource not found"), HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(Exception.class)
+    /*@ExceptionHandler(Exception.class)
     public void handleException(Exception npe) {
-        System.out.println(npe);
-    }
+        System.out.println(npe.getStackTrace());
+    }*/
     
     
     @ExceptionHandler(NullPointerException.class)
@@ -43,6 +44,11 @@ public class ErrorHandlingController implements ErrorController {
         return new ResponseEntity<>(new Resource<>(e.getMessage()), BAD_REQUEST);
     }
 
+    @ExceptionHandler(MyException.class)
+    public HttpEntity<Resource<String>> handleMyException(MyException me) {
+        return new ResponseEntity<>(new Resource<>(me.getMessage()), BAD_REQUEST);
+    }
+    
     @Override
     public String getErrorPath() {
         return "/error";
